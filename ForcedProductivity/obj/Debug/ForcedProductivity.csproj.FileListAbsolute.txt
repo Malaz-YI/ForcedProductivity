@@ -1,0 +1,11 @@
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\bin\Debug\Forced Productivity.exe.config
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\bin\Debug\Forced Productivity.exe
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\bin\Debug\Forced Productivity.pdb
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\obj\Debug\ForcedProductivity.Form1.resources
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\obj\Debug\ForcedProductivity.Form2.resources
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\obj\Debug\ForcedProductivity.Pending_Tasks.resources
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\obj\Debug\ForcedProductivity.Properties.Resources.resources
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\obj\Debug\ForcedProductivity.csproj.GenerateResource.cache
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\obj\Debug\Forced Productivity.exe
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\obj\Debug\Forced Productivity.pdb
+C:\Users\MalazPC\source\repos\ForcedProductivity\ForcedProductivity\obj\Debug\ForcedProductivity.csprojAssemblyReference.cache
