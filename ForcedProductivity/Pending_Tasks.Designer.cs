@@ -123,12 +123,13 @@
             // 
             // btn_ChangeTask
             // 
-            this.btn_ChangeTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(198)))), ((int)(((byte)(64)))));
+            this.btn_ChangeTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(136)))), ((int)(((byte)(197)))));
             this.btn_ChangeTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ChangeTask.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ChangeTask.Location = new System.Drawing.Point(841, 537);
+            this.btn_ChangeTask.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_ChangeTask.Location = new System.Drawing.Point(841, 532);
             this.btn_ChangeTask.Name = "btn_ChangeTask";
-            this.btn_ChangeTask.Size = new System.Drawing.Size(108, 29);
+            this.btn_ChangeTask.Size = new System.Drawing.Size(108, 34);
             this.btn_ChangeTask.TabIndex = 3;
             this.btn_ChangeTask.Text = "Change Task";
             this.btn_ChangeTask.UseVisualStyleBackColor = false;

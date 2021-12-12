@@ -19,3 +19,4 @@ D:\Forced Productivity\Source Code\ForcedProductivity\ForcedProductivity\obj\Deb
 D:\Forced Productivity\Source Code\ForcedProductivity\ForcedProductivity\obj\Debug\ForcedProductivity.csproj.GenerateResource.cache
 D:\Forced Productivity\Source Code\ForcedProductivity\ForcedProductivity\obj\Debug\Forced Productivity.exe
 D:\Forced Productivity\Source Code\ForcedProductivity\ForcedProductivity\obj\Debug\Forced Productivity.pdb
+D:\Forced Productivity\Source Code\ForcedProductivity\ForcedProductivity\obj\Debug\ForcedProductivity.csprojAssemblyReference.cache

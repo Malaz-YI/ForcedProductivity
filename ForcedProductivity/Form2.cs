@@ -18,20 +18,20 @@ namespace ForcedProductivity
         public Form2()
         {
             InitializeComponent();
-            btnSelectFile.FlatAppearance.BorderSize = 0;
-            btnSelectFile.AutoSize = false;
+            btn_SelectFile.FlatAppearance.BorderSize = 0;
+            btn_SelectFile.AutoSize = false;
         }
 
-        private void btnSelectFile_Click(object sender, EventArgs e)
+        private void btn_SelectFile_Click(object sender, EventArgs e)
         {
             selectFile = new OpenFileDialog();
             if (selectFile.ShowDialog() == DialogResult.OK)
             {
-                lblSelectedPath.Text = "Selected File: " + selectFile.FileName;
+                lbl_SelectedPath.Text = "Selected File: " + selectFile.FileName;
                 Settings.Default["selectedTask"] = selectFile.FileName;
             }
 
-            if (checkStartup.Checked == true && selectFile != null)
+            if (check_Startup.Checked == true && selectFile != null)
             {
                 check_SpecificTime.Enabled = false;
                 if (updown_Hour.Value > 0 || updown_Minute.Value > 0)
@@ -49,14 +49,9 @@ namespace ForcedProductivity
             }
         }
 
-        private void lblSelectedPath_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkStartup_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkStartup.Checked == true)
+            if (check_Startup.Checked == true)
             {
                 check_SpecificTime.Enabled = false;
                 if (updown_Hour.Value > 0 || updown_Minute.Value > 0)
@@ -78,7 +73,7 @@ namespace ForcedProductivity
         private void updown_Minute_ValueChanged(object sender, EventArgs e)
         {
             if ((updown_Minute.Value > 0 || updown_Hour.Value >0) && 
-                checkStartup.Checked == true &&
+                check_Startup.Checked == true &&
                 selectFile != null)
             {
                 btn_SetUpTask.Visible = true;
@@ -98,7 +93,7 @@ namespace ForcedProductivity
         private void updown_Hour_ValueChanged(object sender, EventArgs e)
         {
             if ((updown_Minute.Value > 0 || updown_Hour.Value > 0) &&
-                checkStartup.Checked == true &&
+                check_Startup.Checked == true &&
                 selectFile != null)
             {
                 btn_SetUpTask.Visible = true;
@@ -120,7 +115,7 @@ namespace ForcedProductivity
             if (check_SpecificTime.Checked)
             {
                 txtbox_Alarm.Visible = true;
-                checkStartup.Enabled = false;
+                check_Startup.Enabled = false;
                 Settings.Default["RunAt_Type"] = "SpecificTime";
                 if (updown_Hour.Value > 0 || updown_Minute.Value > 0)
                 {
@@ -134,7 +129,7 @@ namespace ForcedProductivity
             else
             {
                 txtbox_Alarm.Visible = false;
-                checkStartup.Enabled = true;
+                check_Startup.Enabled = true;
             }
         
         }
@@ -142,7 +137,7 @@ namespace ForcedProductivity
         private void btn_SetUpTask_Click(object sender, EventArgs e)
         {
             Pending_Tasks formPendingTasks = new Pending_Tasks();
-            if (checkStartup.Checked && selectFile.FileName != String.Empty && (updown_Hour.Value>0 || updown_Minute.Value>0))
+            if (check_Startup.Checked && selectFile.FileName != string.Empty && (updown_Hour.Value>0 || updown_Minute.Value>0))
             {
 
                 // Run on startup
@@ -166,9 +161,9 @@ namespace ForcedProductivity
                 try
                 {
                     char[] delimiterChars = { ' ', ',', '.', ':', '\t', '-' };
-                    string[] selectedAlarm_Text = txtbox_Alarm.Text.Trim().Split(delimiterChars);
-                    string selectedAlarm_Hours = selectedAlarm_Text[0].ToString();
-                    string selectedAlarm_Minutes = selectedAlarm_Text[1].ToString();
+                    string[] enteredAlarm_Text = txtbox_Alarm.Text.Trim().Split(delimiterChars);
+                    string selectedAlarm_Hours = enteredAlarm_Text[0].ToString();
+                    string selectedAlarm_Minutes = enteredAlarm_Text[1].ToString();
                     Settings.Default["setupAlarm"] = selectedAlarm_Hours + ":" + selectedAlarm_Minutes;
                     Settings.Default.RunAt_Type = "SpecificTime";
                     Settings.Default["selectedTask"] = selectFile.FileName;
@@ -201,11 +196,6 @@ namespace ForcedProductivity
             txtbox_Alarm.Text = "";
             txtbox_Alarm.ForeColor = Color.Black;
             txtbox_Alarm.Enter -= txtbox_Alarm_Enter;
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
