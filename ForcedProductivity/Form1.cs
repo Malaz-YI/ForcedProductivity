@@ -52,7 +52,7 @@ namespace ForcedProductivity
                         minutes = minutes - 1;
                         seconds = 59;
                     }
-                    if (minutes == 0 && hours > 0)
+                    else if (minutes == 0 && hours > 0)
                     {
                         hours = hours - 1;
                         minutes = 59;
@@ -60,9 +60,10 @@ namespace ForcedProductivity
                 }
                 else
                 {
+                    // Timer has ended:
                     myCountdown.Enabled = false;
                     myCountdown.Stop();
-                    toggleFullScreen.Visible = true;
+                    btn_ToggleFullscreen.Visible = true;
                     System.Media.SoundPlayer endSound = new System.Media.SoundPlayer(@".\567205__ddmyzik__simple-clean-logo.wav");
                     endSound.Play();
                     Settings.Default.HasBeenRun = true;
@@ -74,16 +75,17 @@ namespace ForcedProductivity
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Redo at the end: !important
+            // Maximize & remove borders
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             System.Media.SoundPlayer startSound = new System.Media.SoundPlayer(@".\567204__ddmyzik__announcement-sound-4.wav");
             startSound.Play();
         }
 
+        // These two lines are needed to opn the app inside the form
         [DllImport("user32.dll")]
         static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_RunTask_Click(object sender, EventArgs e)
         {
             myCountdown.Dispose();
             TimerStart();
@@ -101,13 +103,13 @@ namespace ForcedProductivity
                 }
                 SetParent(ExternalProcess.MainWindowHandle, this.Handle);
                 this.WindowState = FormWindowState.Maximized;
-             }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show($"Something went wrong!\n\nDetails:{ex.Message}");
                 myCountdown.Enabled = false;
                 myCountdown.Stop();
-                toggleFullScreen.Visible = true;
+                btn_ToggleFullscreen.Visible = true;
                 Settings.Default.HasBeenRun = true;
                 Settings.Default.Save();
             }
@@ -131,6 +133,7 @@ namespace ForcedProductivity
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+            // Maybe change this to hide form?
         }
     }
 }

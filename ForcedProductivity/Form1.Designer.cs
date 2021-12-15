@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_RunTask = new System.Windows.Forms.Button();
             this.txtTimer = new System.Windows.Forms.TextBox();
-            this.toggleFullScreen = new System.Windows.Forms.Button();
+            this.btn_ToggleFullscreen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_RunTask
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(136)))), ((int)(((byte)(197)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(27, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Run Task";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_RunTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(136)))), ((int)(((byte)(197)))));
+            this.btn_RunTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RunTask.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RunTask.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_RunTask.Location = new System.Drawing.Point(27, 31);
+            this.btn_RunTask.Name = "btn_RunTask";
+            this.btn_RunTask.Size = new System.Drawing.Size(131, 41);
+            this.btn_RunTask.TabIndex = 0;
+            this.btn_RunTask.Text = "Run Task";
+            this.btn_RunTask.UseVisualStyleBackColor = false;
+            this.btn_RunTask.Click += new System.EventHandler(this.btn_RunTask_Click);
             // 
             // txtTimer
             // 
@@ -59,21 +59,21 @@
             this.txtTimer.Text = "00:00:00";
             this.txtTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // toggleFullScreen
+            // btn_ToggleFullscreen
             // 
-            this.toggleFullScreen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.toggleFullScreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(211)))));
-            this.toggleFullScreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.toggleFullScreen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleFullScreen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.toggleFullScreen.Location = new System.Drawing.Point(27, 604);
-            this.toggleFullScreen.Name = "toggleFullScreen";
-            this.toggleFullScreen.Size = new System.Drawing.Size(131, 38);
-            this.toggleFullScreen.TabIndex = 3;
-            this.toggleFullScreen.Text = "Toggle Fullscreen";
-            this.toggleFullScreen.UseVisualStyleBackColor = false;
-            this.toggleFullScreen.Visible = false;
-            this.toggleFullScreen.Click += new System.EventHandler(this.toggleFullScreen_Click);
+            this.btn_ToggleFullscreen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_ToggleFullscreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(211)))));
+            this.btn_ToggleFullscreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ToggleFullscreen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ToggleFullscreen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_ToggleFullscreen.Location = new System.Drawing.Point(27, 604);
+            this.btn_ToggleFullscreen.Name = "btn_ToggleFullscreen";
+            this.btn_ToggleFullscreen.Size = new System.Drawing.Size(131, 38);
+            this.btn_ToggleFullscreen.TabIndex = 3;
+            this.btn_ToggleFullscreen.Text = "Toggle Fullscreen";
+            this.btn_ToggleFullscreen.UseVisualStyleBackColor = false;
+            this.btn_ToggleFullscreen.Visible = false;
+            this.btn_ToggleFullscreen.Click += new System.EventHandler(this.toggleFullScreen_Click);
             // 
             // Form1
             // 
@@ -81,9 +81,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(1217, 654);
-            this.Controls.Add(this.toggleFullScreen);
+            this.Controls.Add(this.btn_ToggleFullscreen);
             this.Controls.Add(this.txtTimer);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_RunTask);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -98,9 +98,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_RunTask;
         private System.Windows.Forms.TextBox txtTimer;
-        private System.Windows.Forms.Button toggleFullScreen;
+        private System.Windows.Forms.Button btn_ToggleFullscreen;
     }
 }
 
